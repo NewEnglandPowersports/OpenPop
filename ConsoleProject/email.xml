@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<?ADF version="1.0"?>
+<adf><prospect><requestdate>2017-04-19T18:43:01+00:00</requestdate><id
+sequence="1" source="SourceName">CycleTrader.com</id><vehicle interest="buy"
+status="used"><id sequence="1"
+source="CycleTrader.com"/><year>1997</year><make>Seadoo</make><model>GTX</model><stock>37B797</stock><bodystyle>Two
+Seater Personal
+Watercraft</bodystyle><vin/><price>2990</price></vehicle><customer><contact
+primarycontact="1"><name part="full">Deborah Stein</name><name
+part="first">Deborah</name><name
+part="last">Stein</name><email>debbie.stein@comcast.net</email><phone
+type="phone" time="nopreference">(978) 397-1587</phone><address><street
+line="1"></street><city/><regioncode/><postalcode/><country>USA</country></address></contact><comments><![CDATA[Comments:
+I'd like more information about your listing for a '1997 Seadoo GTX' for
+$2,990 there a warranty?]]></comments></customer><vendor><id sequence="1"
+source="Cycles! 128"/><vendorname>Cycles! 128</vendorname><contact
+primarycontact="1"><name part="full">Cycles! 128</name><phone type="voice"
+time="nopreference">(978) 927-3400</phone><address><street line="1">107
+Brimbal
+Ave</street><city>Beverly</city><regioncode>MA</regioncode><postalcode>01915</postalcode><country>USA</country></address></contact></vendor><provider><name
+part="full">CycleTrader.com</name><service>EMAIL-DESKTOP</service><url>CycleTrader.com</url><email>dealersupport@cycletrader.com</email><phone/><contact
+primarycontact="1"><name part="full">Customer
+Service</name><email>dealersupport@cycletrader.com</email><phone
+type="voice" time="day"/><address><street>150 Granby
+Street</street><city>Norfolk</city><regioncode>VA</regioncode><postalcode>23510</postalcode><country>USA</country></address></contact></provider></prospect></adf> 
+

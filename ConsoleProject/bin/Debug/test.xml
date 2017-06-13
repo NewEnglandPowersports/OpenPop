@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?ADF version="1.0"?>
+<adf>
+  <prospect>
+    <requestdate>2017-06-12T19:07:02+00:00</requestdate>
+    <id sequence="1" source="SourceName">CycleTrader.com</id>
+    <vehicle interest="buy" status="used">
+      <id sequence="1" source="CycleTrader.com" />
+      <year>2016</year>
+      <make>KTM</make>
+      <model>RC390ABS</model>
+      <stock>245980</stock>
+      <bodystyle>Standard Motorcycle</bodystyle>
+      <vin />
+      <price>4599</price>
+    </vehicle>
+    <customer>
+      <contact primarycontact="1">
+        <name part="full">mike sands</name>
+        <name part="first">mike</name>
+        <name part="last">sands</name>
+        <email>jim@ne-ps.net</email>
+        <phone type="phone" time="nopreference">(978) 836-9130</phone>
+        <address>
+          <street line="1">
+          </street>
+          <city />
+          <regioncode />
+          <postalcode />
+          <country>USA</country>
+        </address>
+      </contact>
+      <comments><![CDATA[Comments: this is a test]]></comments>
+    </customer>
+    <vendor>
+      <id sequence="1" source="New England Powersports" />
+      <vendorname>New England Powersports</vendorname>
+      <contact primarycontact="1">
+        <name part="full">New England Powersports</name>
+        <phone type="voice" time="nopreference">(978) 927-3400</phone>
+        <address>
+          <street line="1">107 Brimbal Ave</street>
+          <city>Beverly</city>
+          <regioncode>MA</regioncode>
+          <postalcode>01915</postalcode>
+          <country>USA</country>
+        </address>
+      </contact>
+    </vendor>
+    <provider>
+      <name part="full">CycleTrader.com</name>
+      <service>EMAIL-DESKTOP</service>
+      <url>CycleTrader.com</url>
+      <email>dealersupport@cycletrader.com</email>
+      <phone />
+      <contact primarycontact="1">
+        <name part="full">Customer Service</name>
+        <email>dealersupport@cycletrader.com</email>
+        <phone type="voice" time="day" />
+        <address>
+          <street>150 Granby Street</street>
+          <city>Norfolk</city>
+          <regioncode>VA</regioncode>
+          <postalcode>23510</postalcode>
+          <country>USA</country>
+        </address>
+      </contact>
+    </provider>
+  </prospect>
+</adf>

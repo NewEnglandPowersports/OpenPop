@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetProspectSourcesXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filterCriteria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectSourcesXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProspectSourcesXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectSourcesDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="filterCriteria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectSourcesDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProspectSourcesDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectSourcePremiumsXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filterCriteria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectSourcePremiumsXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProspectSourcePremiumsXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectSourcePremiumsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sourceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filterCriteria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectSourcePremiumsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProspectSourcePremiumsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferenceXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="action" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferenceXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReferenceXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProspect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prospectXml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sourceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProspectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddProspectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RePushProspect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prospectId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RePushProspectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RePushProspectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectsByProximityToZipCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="distanceInMiles" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectsByProximityToZipCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProspectsByProximityToZipCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectsByProximityToZipCodeDataTableDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="distanceInMiles" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="filter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectsByProximityToZipCodeDataTableDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProspectsByProximityToZipCodeDataTableDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sourcePremiumFilter" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="filterCriteria" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNearbyProspectsUsingSourcePremiumFilterDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNearbyProspectsUsingSourcePremiumFilterDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProspectAvailability">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prospectId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isClaimed" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dealershipId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dealershipUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProspectAvailabilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateProspectAvailabilityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prospectId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProspectDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProspectDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddHistoryEntryForProspect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prospectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entryType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entryDetail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddHistoryEntryForProspectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddHistoryEntryForProspectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddHistoryEntryForProspectWithUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prospectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entryType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entryDetail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddHistoryEntryForProspectWithUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddHistoryEntryForProspectWithUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportBadProspect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reportXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportBadProspectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportBadProspectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurchaseProspect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="purchaseRequestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PurchaseProspectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PurchaseProspectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProspectSourcesXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcesXML" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcesXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcesDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcesDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcePremiumsXml" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcePremiumsXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcePremiumsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProspectSourcePremiumsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReferenceXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReferenceXML" />
+  </wsdl:message>
+  <wsdl:message name="GetReferenceXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReferenceXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProspectSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProspect" />
+  </wsdl:message>
+  <wsdl:message name="AddProspectSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="RePushProspectSoapIn">
+    <wsdl:part name="parameters" element="tns:RePushProspect" />
+  </wsdl:message>
+  <wsdl:message name="RePushProspectSoapOut">
+    <wsdl:part name="parameters" element="tns:RePushProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProspectsByProximityToZipCode" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProspectsByProximityToZipCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeDataTableDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProspectsByProximityToZipCodeDataTableDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeDataTableDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProspectsByProximityToZipCodeDataTableDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNearbyProspectsUsingSourcePremiumFilterDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetNearbyProspectsUsingSourcePremiumFilterDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProspectAvailabilitySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProspectAvailability" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProspectAvailabilitySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProspectAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProspectDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProspectDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectSoapIn">
+    <wsdl:part name="parameters" element="tns:AddHistoryEntryForProspect" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectSoapOut">
+    <wsdl:part name="parameters" element="tns:AddHistoryEntryForProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectWithUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AddHistoryEntryForProspectWithUser" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectWithUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AddHistoryEntryForProspectWithUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportBadProspectSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportBadProspect" />
+  </wsdl:message>
+  <wsdl:message name="ReportBadProspectSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportBadProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseProspectSoapIn">
+    <wsdl:part name="parameters" element="tns:PurchaseProspect" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseProspectSoapOut">
+    <wsdl:part name="parameters" element="tns:PurchaseProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesXMLHttpGetIn">
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesDataSetHttpGetIn">
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesDataSetHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsXmlHttpGetIn">
+    <wsdl:part name="sourceId" type="s:string" />
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsXmlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsDataSetHttpGetIn">
+    <wsdl:part name="sourceId" type="s:string" />
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsDataSetHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetReferenceXMLHttpGetIn">
+    <wsdl:part name="action" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReferenceXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddProspectHttpGetIn">
+    <wsdl:part name="prospectXml" type="s:string" />
+    <wsdl:part name="sourceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddProspectHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RePushProspectHttpGetIn">
+    <wsdl:part name="prospectId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RePushProspectHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeHttpGetIn">
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="distanceInMiles" type="s:string" />
+    <wsdl:part name="filter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeDataTableDataSetHttpGetIn">
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="distanceInMiles" type="s:string" />
+    <wsdl:part name="filter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeDataTableDataSetHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpGetIn">
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="sourcePremiumFilter" type="s1:StringArray" />
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProspectAvailabilityHttpGetIn">
+    <wsdl:part name="prospectId" type="s:string" />
+    <wsdl:part name="isClaimed" type="s:string" />
+    <wsdl:part name="dealershipId" type="s:string" />
+    <wsdl:part name="dealershipUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProspectAvailabilityHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectDetailHttpGetIn">
+    <wsdl:part name="prospectId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectDetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectHttpGetIn">
+    <wsdl:part name="prospectId" type="s:string" />
+    <wsdl:part name="entryType" type="s:string" />
+    <wsdl:part name="entryDetail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectWithUserHttpGetIn">
+    <wsdl:part name="prospectId" type="s:string" />
+    <wsdl:part name="entryType" type="s:string" />
+    <wsdl:part name="entryDetail" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectWithUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportBadProspectHttpGetIn">
+    <wsdl:part name="reportXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportBadProspectHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseProspectHttpGetIn">
+    <wsdl:part name="purchaseRequestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseProspectHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesXMLHttpPostIn">
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesDataSetHttpPostIn">
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcesDataSetHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsXmlHttpPostIn">
+    <wsdl:part name="sourceId" type="s:string" />
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsDataSetHttpPostIn">
+    <wsdl:part name="sourceId" type="s:string" />
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectSourcePremiumsDataSetHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetReferenceXMLHttpPostIn">
+    <wsdl:part name="action" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReferenceXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddProspectHttpPostIn">
+    <wsdl:part name="prospectXml" type="s:string" />
+    <wsdl:part name="sourceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddProspectHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RePushProspectHttpPostIn">
+    <wsdl:part name="prospectId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RePushProspectHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeHttpPostIn">
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="distanceInMiles" type="s:string" />
+    <wsdl:part name="filter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeDataTableDataSetHttpPostIn">
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="distanceInMiles" type="s:string" />
+    <wsdl:part name="filter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectsByProximityToZipCodeDataTableDataSetHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpPostIn">
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="sourcePremiumFilter" type="s1:StringArray" />
+    <wsdl:part name="filterCriteria" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProspectAvailabilityHttpPostIn">
+    <wsdl:part name="prospectId" type="s:string" />
+    <wsdl:part name="isClaimed" type="s:string" />
+    <wsdl:part name="dealershipId" type="s:string" />
+    <wsdl:part name="dealershipUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProspectAvailabilityHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectDetailHttpPostIn">
+    <wsdl:part name="prospectId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProspectDetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectHttpPostIn">
+    <wsdl:part name="prospectId" type="s:string" />
+    <wsdl:part name="entryType" type="s:string" />
+    <wsdl:part name="entryDetail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectWithUserHttpPostIn">
+    <wsdl:part name="prospectId" type="s:string" />
+    <wsdl:part name="entryType" type="s:string" />
+    <wsdl:part name="entryDetail" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddHistoryEntryForProspectWithUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportBadProspectHttpPostIn">
+    <wsdl:part name="reportXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportBadProspectHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseProspectHttpPostIn">
+    <wsdl:part name="purchaseRequestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseProspectHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="GetProspectSourcesXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an XML string representing a list of available Prospect Sources</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcesXMLSoapIn" />
+      <wsdl:output message="tns:GetProspectSourcesXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcesDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a DataSet of available Prospect Sources</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcesDataSetSoapIn" />
+      <wsdl:output message="tns:GetProspectSourcesDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an XML string representing a list of available Prospect Source Premiums</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcePremiumsXmlSoapIn" />
+      <wsdl:output message="tns:GetProspectSourcePremiumsXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a DataSet of available Prospect Source Premiums</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcePremiumsDataSetSoapIn" />
+      <wsdl:output message="tns:GetProspectSourcePremiumsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the reference XML to perform the action provided. Currently supports ProspectImport</wsdl:documentation>
+      <wsdl:input message="tns:GetReferenceXMLSoapIn" />
+      <wsdl:output message="tns:GetReferenceXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Prospect into the Clearinghouse</wsdl:documentation>
+      <wsdl:input message="tns:AddProspectSoapIn" />
+      <wsdl:output message="tns:AddProspectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RePushProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Re-Push Prospect to Dealership</wsdl:documentation>
+      <wsdl:input message="tns:RePushProspectSoapIn" />
+      <wsdl:output message="tns:RePushProspectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by proximity to ZipCode provided</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectsByProximityToZipCodeSoapIn" />
+      <wsdl:output message="tns:GetProspectsByProximityToZipCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCodeDataTableDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by proximity to ZipCode provided</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectsByProximityToZipCodeDataTableDataSetSoapIn" />
+      <wsdl:output message="tns:GetProspectsByProximityToZipCodeDataTableDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by Source/Premium provided</wsdl:documentation>
+      <wsdl:input message="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSetSoapIn" />
+      <wsdl:output message="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspectAvailability">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a Prospect's availability</wsdl:documentation>
+      <wsdl:input message="tns:UpdateProspectAvailabilitySoapIn" />
+      <wsdl:output message="tns:UpdateProspectAvailabilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets full Prospect record</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectDetailSoapIn" />
+      <wsdl:output message="tns:GetProspectDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a history entry for the indicated Prospect</wsdl:documentation>
+      <wsdl:input message="tns:AddHistoryEntryForProspectSoapIn" />
+      <wsdl:output message="tns:AddHistoryEntryForProspectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspectWithUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a history entry for the indicated Prospect</wsdl:documentation>
+      <wsdl:input message="tns:AddHistoryEntryForProspectWithUserSoapIn" />
+      <wsdl:output message="tns:AddHistoryEntryForProspectWithUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportBadProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Processes a report of a bad prospect</wsdl:documentation>
+      <wsdl:input message="tns:ReportBadProspectSoapIn" />
+      <wsdl:output message="tns:ReportBadProspectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submits a purchase request for a non-free Prospect to the vendor</wsdl:documentation>
+      <wsdl:input message="tns:PurchaseProspectSoapIn" />
+      <wsdl:output message="tns:PurchaseProspectSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="GetProspectSourcesXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an XML string representing a list of available Prospect Sources</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcesXMLHttpGetIn" />
+      <wsdl:output message="tns:GetProspectSourcesXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcesDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a DataSet of available Prospect Sources</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcesDataSetHttpGetIn" />
+      <wsdl:output message="tns:GetProspectSourcesDataSetHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an XML string representing a list of available Prospect Source Premiums</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcePremiumsXmlHttpGetIn" />
+      <wsdl:output message="tns:GetProspectSourcePremiumsXmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a DataSet of available Prospect Source Premiums</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcePremiumsDataSetHttpGetIn" />
+      <wsdl:output message="tns:GetProspectSourcePremiumsDataSetHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the reference XML to perform the action provided. Currently supports ProspectImport</wsdl:documentation>
+      <wsdl:input message="tns:GetReferenceXMLHttpGetIn" />
+      <wsdl:output message="tns:GetReferenceXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Prospect into the Clearinghouse</wsdl:documentation>
+      <wsdl:input message="tns:AddProspectHttpGetIn" />
+      <wsdl:output message="tns:AddProspectHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RePushProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Re-Push Prospect to Dealership</wsdl:documentation>
+      <wsdl:input message="tns:RePushProspectHttpGetIn" />
+      <wsdl:output message="tns:RePushProspectHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by proximity to ZipCode provided</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectsByProximityToZipCodeHttpGetIn" />
+      <wsdl:output message="tns:GetProspectsByProximityToZipCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCodeDataTableDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by proximity to ZipCode provided</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectsByProximityToZipCodeDataTableDataSetHttpGetIn" />
+      <wsdl:output message="tns:GetProspectsByProximityToZipCodeDataTableDataSetHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by Source/Premium provided</wsdl:documentation>
+      <wsdl:input message="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpGetIn" />
+      <wsdl:output message="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspectAvailability">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a Prospect's availability</wsdl:documentation>
+      <wsdl:input message="tns:UpdateProspectAvailabilityHttpGetIn" />
+      <wsdl:output message="tns:UpdateProspectAvailabilityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets full Prospect record</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectDetailHttpGetIn" />
+      <wsdl:output message="tns:GetProspectDetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a history entry for the indicated Prospect</wsdl:documentation>
+      <wsdl:input message="tns:AddHistoryEntryForProspectHttpGetIn" />
+      <wsdl:output message="tns:AddHistoryEntryForProspectHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspectWithUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a history entry for the indicated Prospect</wsdl:documentation>
+      <wsdl:input message="tns:AddHistoryEntryForProspectWithUserHttpGetIn" />
+      <wsdl:output message="tns:AddHistoryEntryForProspectWithUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportBadProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Processes a report of a bad prospect</wsdl:documentation>
+      <wsdl:input message="tns:ReportBadProspectHttpGetIn" />
+      <wsdl:output message="tns:ReportBadProspectHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submits a purchase request for a non-free Prospect to the vendor</wsdl:documentation>
+      <wsdl:input message="tns:PurchaseProspectHttpGetIn" />
+      <wsdl:output message="tns:PurchaseProspectHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="GetProspectSourcesXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an XML string representing a list of available Prospect Sources</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcesXMLHttpPostIn" />
+      <wsdl:output message="tns:GetProspectSourcesXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcesDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a DataSet of available Prospect Sources</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcesDataSetHttpPostIn" />
+      <wsdl:output message="tns:GetProspectSourcesDataSetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an XML string representing a list of available Prospect Source Premiums</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcePremiumsXmlHttpPostIn" />
+      <wsdl:output message="tns:GetProspectSourcePremiumsXmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a DataSet of available Prospect Source Premiums</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectSourcePremiumsDataSetHttpPostIn" />
+      <wsdl:output message="tns:GetProspectSourcePremiumsDataSetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the reference XML to perform the action provided. Currently supports ProspectImport</wsdl:documentation>
+      <wsdl:input message="tns:GetReferenceXMLHttpPostIn" />
+      <wsdl:output message="tns:GetReferenceXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Push Prospect into the Clearinghouse</wsdl:documentation>
+      <wsdl:input message="tns:AddProspectHttpPostIn" />
+      <wsdl:output message="tns:AddProspectHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RePushProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Re-Push Prospect to Dealership</wsdl:documentation>
+      <wsdl:input message="tns:RePushProspectHttpPostIn" />
+      <wsdl:output message="tns:RePushProspectHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by proximity to ZipCode provided</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectsByProximityToZipCodeHttpPostIn" />
+      <wsdl:output message="tns:GetProspectsByProximityToZipCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCodeDataTableDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by proximity to ZipCode provided</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectsByProximityToZipCodeDataTableDataSetHttpPostIn" />
+      <wsdl:output message="tns:GetProspectsByProximityToZipCodeDataTableDataSetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Prospects, filtered by Source/Premium provided</wsdl:documentation>
+      <wsdl:input message="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpPostIn" />
+      <wsdl:output message="tns:GetNearbyProspectsUsingSourcePremiumFilterDataSetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspectAvailability">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates a Prospect's availability</wsdl:documentation>
+      <wsdl:input message="tns:UpdateProspectAvailabilityHttpPostIn" />
+      <wsdl:output message="tns:UpdateProspectAvailabilityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets full Prospect record</wsdl:documentation>
+      <wsdl:input message="tns:GetProspectDetailHttpPostIn" />
+      <wsdl:output message="tns:GetProspectDetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a history entry for the indicated Prospect</wsdl:documentation>
+      <wsdl:input message="tns:AddHistoryEntryForProspectHttpPostIn" />
+      <wsdl:output message="tns:AddHistoryEntryForProspectHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspectWithUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a history entry for the indicated Prospect</wsdl:documentation>
+      <wsdl:input message="tns:AddHistoryEntryForProspectWithUserHttpPostIn" />
+      <wsdl:output message="tns:AddHistoryEntryForProspectWithUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportBadProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Processes a report of a bad prospect</wsdl:documentation>
+      <wsdl:input message="tns:ReportBadProspectHttpPostIn" />
+      <wsdl:output message="tns:ReportBadProspectHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseProspect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submits a purchase request for a non-free Prospect to the vendor</wsdl:documentation>
+      <wsdl:input message="tns:PurchaseProspectHttpPostIn" />
+      <wsdl:output message="tns:PurchaseProspectHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProspectSourcesXML">
+      <soap:operation soapAction="http://tempuri.org/GetProspectSourcesXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcesDataSet">
+      <soap:operation soapAction="http://tempuri.org/GetProspectSourcesDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsXml">
+      <soap:operation soapAction="http://tempuri.org/GetProspectSourcePremiumsXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsDataSet">
+      <soap:operation soapAction="http://tempuri.org/GetProspectSourcePremiumsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceXML">
+      <soap:operation soapAction="http://tempuri.org/GetReferenceXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProspect">
+      <soap:operation soapAction="http://tempuri.org/AddProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RePushProspect">
+      <soap:operation soapAction="http://tempuri.org/RePushProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCode">
+      <soap:operation soapAction="http://tempuri.org/GetProspectsByProximityToZipCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCodeDataTableDataSet">
+      <soap:operation soapAction="http://tempuri.org/GetProspectsByProximityToZipCodeDataTableDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+      <soap:operation soapAction="http://tempuri.org/GetNearbyProspectsUsingSourcePremiumFilterDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspectAvailability">
+      <soap:operation soapAction="http://tempuri.org/UpdateProspectAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectDetail">
+      <soap:operation soapAction="http://tempuri.org/GetProspectDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspect">
+      <soap:operation soapAction="http://tempuri.org/AddHistoryEntryForProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspectWithUser">
+      <soap:operation soapAction="http://tempuri.org/AddHistoryEntryForProspectWithUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportBadProspect">
+      <soap:operation soapAction="http://tempuri.org/ReportBadProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseProspect">
+      <soap:operation soapAction="http://tempuri.org/PurchaseProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProspectSourcesXML">
+      <soap12:operation soapAction="http://tempuri.org/GetProspectSourcesXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcesDataSet">
+      <soap12:operation soapAction="http://tempuri.org/GetProspectSourcesDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsXml">
+      <soap12:operation soapAction="http://tempuri.org/GetProspectSourcePremiumsXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsDataSet">
+      <soap12:operation soapAction="http://tempuri.org/GetProspectSourcePremiumsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceXML">
+      <soap12:operation soapAction="http://tempuri.org/GetReferenceXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProspect">
+      <soap12:operation soapAction="http://tempuri.org/AddProspect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RePushProspect">
+      <soap12:operation soapAction="http://tempuri.org/RePushProspect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCode">
+      <soap12:operation soapAction="http://tempuri.org/GetProspectsByProximityToZipCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCodeDataTableDataSet">
+      <soap12:operation soapAction="http://tempuri.org/GetProspectsByProximityToZipCodeDataTableDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+      <soap12:operation soapAction="http://tempuri.org/GetNearbyProspectsUsingSourcePremiumFilterDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspectAvailability">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProspectAvailability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetProspectDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspect">
+      <soap12:operation soapAction="http://tempuri.org/AddHistoryEntryForProspect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspectWithUser">
+      <soap12:operation soapAction="http://tempuri.org/AddHistoryEntryForProspectWithUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportBadProspect">
+      <soap12:operation soapAction="http://tempuri.org/ReportBadProspect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseProspect">
+      <soap12:operation soapAction="http://tempuri.org/PurchaseProspect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetProspectSourcesXML">
+      <http:operation location="/GetProspectSourcesXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcesDataSet">
+      <http:operation location="/GetProspectSourcesDataSet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsXml">
+      <http:operation location="/GetProspectSourcePremiumsXml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsDataSet">
+      <http:operation location="/GetProspectSourcePremiumsDataSet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceXML">
+      <http:operation location="/GetReferenceXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProspect">
+      <http:operation location="/AddProspect" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RePushProspect">
+      <http:operation location="/RePushProspect" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCode">
+      <http:operation location="/GetProspectsByProximityToZipCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCodeDataTableDataSet">
+      <http:operation location="/GetProspectsByProximityToZipCodeDataTableDataSet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+      <http:operation location="/GetNearbyProspectsUsingSourcePremiumFilterDataSet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspectAvailability">
+      <http:operation location="/UpdateProspectAvailability" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectDetail">
+      <http:operation location="/GetProspectDetail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspect">
+      <http:operation location="/AddHistoryEntryForProspect" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspectWithUser">
+      <http:operation location="/AddHistoryEntryForProspectWithUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportBadProspect">
+      <http:operation location="/ReportBadProspect" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseProspect">
+      <http:operation location="/PurchaseProspect" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetProspectSourcesXML">
+      <http:operation location="/GetProspectSourcesXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcesDataSet">
+      <http:operation location="/GetProspectSourcesDataSet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsXml">
+      <http:operation location="/GetProspectSourcePremiumsXml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectSourcePremiumsDataSet">
+      <http:operation location="/GetProspectSourcePremiumsDataSet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReferenceXML">
+      <http:operation location="/GetReferenceXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProspect">
+      <http:operation location="/AddProspect" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RePushProspect">
+      <http:operation location="/RePushProspect" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCode">
+      <http:operation location="/GetProspectsByProximityToZipCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectsByProximityToZipCodeDataTableDataSet">
+      <http:operation location="/GetProspectsByProximityToZipCodeDataTableDataSet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNearbyProspectsUsingSourcePremiumFilterDataSet">
+      <http:operation location="/GetNearbyProspectsUsingSourcePremiumFilterDataSet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspectAvailability">
+      <http:operation location="/UpdateProspectAvailability" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectDetail">
+      <http:operation location="/GetProspectDetail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspect">
+      <http:operation location="/AddHistoryEntryForProspect" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHistoryEntryForProspectWithUser">
+      <http:operation location="/AddHistoryEntryForProspectWithUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportBadProspect">
+      <http:operation location="/ReportBadProspect" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseProspect">
+      <http:operation location="/PurchaseProspect" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://pch.v-sept.com/VSEPTPCHService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://pch.v-sept.com/VSEPTPCHService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://pch.v-sept.com/VSEPTPCHService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://pch.v-sept.com/VSEPTPCHService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
