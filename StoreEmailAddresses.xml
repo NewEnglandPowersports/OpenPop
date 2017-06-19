@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Emails>
+  <email name="c128">c128@capecoder.com</email>
+  <email name="gbms">gbms@capecoder.com</email>
+  <email name="pkwy">pkwy@capecoder.com</email>
+  <email name="plai">plai@capecoder.com</email>
+  <email name="cmps">cmps@capecoder.com</email>
+  <email name="developer">capecoder@capecoder.com</email>
+  <email name="admin">capecoder@capecoder.com</email>
+</Emails>
+
